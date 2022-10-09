@@ -1,0 +1,65 @@
+body {
+    margin: auto;
+    width: 80%;
+    font-family: Arial
+}
+
+img{
+    width: 100%;
+}
+
+h1{
+    color: brown;
+}
+
+h1 > span {
+    font-weight: 500;
+    font-style: italic;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    background-color: burlywood;
+    float: right;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    margin: 0px;
+}
+
+nav ul li{
+    padding: 10px;
+    color: brown
+}
+
+nav ul li :hover{
+    color: white;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+}
+
+section div{
+    background-color: aquamarine;
+    line-height: 0%;
+    width: 32%;
+}
+
+section div h4{
+    color: blue;
+}
+
+section div p{
+    background-color: burlywood;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0px;
+    line-height: 20px;
+}
+
+footer {
+    background-color: aquamarine;
+    padding: 10px;
+}
