@@ -1,0 +1,126 @@
+body {
+    margin: auto;
+    width: 80%;
+    font-family: Arial
+}
+
+img{
+    width: 100%;
+}
+
+h1{
+    color: brown;
+}
+
+h1 > span {
+    font-weight: 500;
+    font-style: italic;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    background-color: burlywood;
+    float: right;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    margin: 0px;
+}
+
+nav ul li{
+    padding: 10px;
+    color: brown
+}
+
+nav ul li :hover{
+    color: red;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 5px;
+}
+
+section div{
+    background-color: aquamarine;
+    line-height: 0%;
+    width: 32%;
+}
+
+section div h4{
+    color: blue;
+}
+
+section div p{
+    background-color: burlywood;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0px;
+    line-height: 20px;
+}
+
+footer {
+    background-color: aquamarine;
+    padding: 10px;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left {
+    width: 48%;
+}
+
+.right{
+    width: 48%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: cyan;
+    padding: 20px 20px 20px 20px;
+    gap: 10px;
+}
+
+form div:first-of-type{
+    display: flex;
+}
+
+form div:first-of-type *{
+    width: 50%;
+}
+
+form div:last-child{
+    display: flex;
+    justify-content: space-between;
+}
+
+form div:last-child *{
+    width: 45%;
+    height: 30px;
+}
+
+input {
+    border-radius: 5px;
+    height: 30px;
+    font-size: 25px;
+    color: gray;
+}
+
+input:focus{
+    background-color: yellow;
+    color: black;
+}
+
+button{
+    border-radius: 5px;
+}
+
+button:hover{
+    color:red;
+}
