@@ -1,0 +1,16 @@
+.valid{
+    background-color: white;
+}
+
+.invalid{
+    background-color: red;
+}
+
+form div:first-child{
+    color: white;
+}
+
+#errors{
+    justify-content: center;
+    width: 100%;
+}

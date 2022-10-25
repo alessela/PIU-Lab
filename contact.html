@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="contact_form.css">
+    <script src="contact.js"></script>
+
 </head>
 <body>
     <h1>CalaTour <span> - your travel agency</span></h1>
@@ -26,26 +30,27 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a porta massa, quis vehicula lectus. Maecenas turpis ligula, ullamcorper vitae mauris ut, rhoncus auctor turpis. Pellentesque id porta magna, non congue neque. Quisque sit amet condimentum mauris. Proin viverra dolor vitae augue consequat, vel pharetra nisl iaculis. Suspendisse potenti. Vestibulum maximus ex quis aliquet venenatis. Mauris vitae faucibus nibh, et tempus diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent venenatis dignissim finibus. Nulla ornare diam non nulla lacinia, ac auctor velit imperdiet. Aliquam ex elit, lacinia non rhoncus in, rhoncus ac libero. Ut sed volutpat diam, nec pulvinar sapien. Cras dui sem, ullamcorper aliquam ultrices nec, imperdiet in nibh. Ut lacinia urna ex, eget fringilla nisi viverra a. Aenean non nibh sed arcu tincidunt lobortis.</p>
         </div>
         <div class="right">
-            <form>
+            <form class="contact_form">
+                <p id="errors"></p>
                 <label for="nume">Numele</label>
-                <input type="text" id="nume" name="nume">
+                <input type="text" id="nume">
                 <label for="prenume">Prenumele</label>
-                <input type="text" id="prenume" name="prenume">
+                <input type="text" id="prenume">
                 <label for="adresa">Adresa</label>
-                <input type="text" id="adresa" name="adresa">
+                <input type="text" id="adresa">
                 <label for="dataNasterii">Data nasterii</label>
-                <input type="date" id="data" name="data">
+                <input type="date" id="data">
                 <label for="telefon">Telefon</label>
-                <input type="text" id="telefon" name="telefon">
+                <input type="text" id="telefon">
                 <label for="email">Email</label>
-                <input type="text" id="email" name="email">
+                <input type="text" id="email">
                 <div>
                     <label for="culoare">Culoarea favorita</label>
-                    <input type="color" id="culoare" name="culoare">
+                    <input type="color" id="culoare">
                 </div>
-                <div >
-                    <button type="submit">Trimite</button>
-                    <button type="submit">Reseteaza</button>
+                <div>
+                    <button type="submit" id="submit">Trimite</button>
+                    <button type="reset" id="reset">Reseteaza</button>
                 </div>
             </form>
         </div>
