@@ -27,6 +27,8 @@ window.onload=function(){
         document.getElementById("email").classList.remove("invalid")
 
         document.getElementById("errors").innerHTML = ''
+
+        document.getElementById("errorsList").style.display='none'
     })
     document.getElementById("nume").onblur = validateLastName
     document.getElementById("prenume").onblur = validateFirstName
@@ -35,7 +37,29 @@ window.onload=function(){
     document.getElementById("telefon").onblur = validatePhone
     document.getElementById("email").onblur = validateEmail
 
+    document.getElementById("errorsList").style.display='none'
+
+    document.getElementById("lastNameError").innerHTML = 'Numele trebuie sa contina cel putin 3 litere'
+    document.getElementById("lastNameError").style.color='red'
+    document.getElementById("firstNameError").innerHTML = 'Prenumele trebuie sa contina cel putin 3 litere'
+    document.getElementById("firstNameError").style.color='red'
+    document.getElementById("addressError").innerHTML='Adresa trebuie sa contina cel putin 3 caractere si cel putin o cifra. Nu sunt acceptate caracterele: @#$%^&*'
+    document.getElementById("addressError").style.color='red'
+    document.getElementById("dateError").innerHTML='Data nasterii nu trebuie sa fie viitoare'
+    document.getElementById("dateError").style.color='red'
+    document.getElementById("phoneError").innerHTML='Telefonul trebuie sa contina numai cifre si un caracter -, in formatul nnn-nnnnnnnnn'
+    document.getElementById("phoneError").style.color='red'
+    document.getElementById("emailError").innerHTML='Adresa de email invalida'
+    document.getElementById("emailError").style.color='red'
+
 function validateInputs(){
+    document.getElementById("lastNameError").style.display='none'
+    document.getElementById("firstNameError").style.display='none'
+    document.getElementById("addressError").style.display='none'
+    document.getElementById("dateError").style.display='none'
+    document.getElementById("phoneError").style.display='none'
+    document.getElementById("emailError").style.display='none'
+
     let val1 = validateAddress()
     let val2 = validateBirthDate()
     let val3 = validateEmail()
@@ -48,11 +72,13 @@ function validateInputs(){
     if (val1 && val2 && val3 && val4 && val5 && val6){
             msg.innerHTML='Date trimise cu succes'
             msg.style.color='black'
+            document.getElementById('errorsList').style.display='none'
             return true
         }
         else{
             msg.innerHTML='Date invalide'
             msg.style.color='red'
+            document.getElementById("errorsList").style.display='block'
             return false
         }
     
@@ -67,6 +93,7 @@ function validateLastName(){
     }
     elemRef.classList.add("invalid")
     elemRef.classList.remove("valid")
+    document.getElementById('lastNameError').style.display='list-item'
     return false
 }
 
@@ -79,6 +106,7 @@ function validateFirstName(){
     }
     elemRef.classList.add("invalid")
     elemRef.classList.remove("valid")
+    document.getElementById('firstNameError').style.display='list-item'
     return false
 }
 
@@ -92,6 +120,7 @@ function validateAddress(){
     }
     elemRef.classList.add("invalid")
     elemRef.classList.remove("valid")
+    document.getElementById('addressError').style.display='list-item'
     return false
 }
 
@@ -102,6 +131,7 @@ function validateBirthDate(){
     if (value === ''){
         elemRef.classList.add("invalid")
         elemRef.classList.remove("valid")
+        document.getElementById('dateError').style.display='list-item'
         return false
     }
 
@@ -110,6 +140,7 @@ function validateBirthDate(){
     if (date > new Date(new Date().toDateString())){
         elemRef.classList.add("invalid")
         elemRef.classList.remove("valid")
+        document.getElementById('dateError').style.display='list-item'
         return false
     }
     elemRef.classList.add("valid")
@@ -127,6 +158,7 @@ function validatePhone(){
     }
     elemRef.classList.add("invalid")
     elemRef.classList.remove("valid")
+    document.getElementById('phoneError').style.display='list-item'
     return false
 }
 
@@ -139,5 +171,6 @@ function validateEmail(){
     }
     elemRef.classList.add("invalid")
     elemRef.classList.remove("valid")
+    document.getElementById('emailError').style.display='list-item'
     return false
 }}
