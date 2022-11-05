@@ -8,10 +8,12 @@
     <script src="jQuery.js"></script>
     <script src="contact.js"></script>
     <script src="chat.js"></script>
+    <script src="chat2.js"></script>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="contact_form.css">
     <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="chat2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -23,7 +25,9 @@
             <li><b>Hiking</b></li>
             <li><b>Swimming</b></li>
             <li><b>Special offers</b></li>
-            <li><a href=""><b>Contact</b></a></li>
+            <li><a href="" class="active"><b>Contact</b></a></li>
+            <li><a style="cursor: pointer" id="readMessages">Read MSG</a></li>
+            <li><a style="cursor: pointer" id="globalLogout">Global Logout</a></li>
         </ul>
         <img src="images/caribbean.jpg" alt="">
     </nav>
@@ -85,14 +89,14 @@
             </div>
         </section>
 
-        <div id="chat_form">
+        <div id="chat">
             <div id="title">
                 <h4>
                     <i class="fa fa-comments"></i>
                     <span>Chat with us!</span>
                 </h4>
             </div>
-            <div id="chat_form">
+            <div class="chat_form">
                 <form>
                     <div id="message">
                         <h3>
@@ -105,6 +109,19 @@
                     <button id="authenticate_button">Authenticate</button>
                 </form>
             </div>
+
+            <div id="welcome">
+                <h5><i class="fa fa-user"></i>Welcome <span>ChatUser_1</span></h5>
+                <i class="fa fa-sign-out"></i>
+                </div>
+                
+                <div id="conversation">
+                    <div id="messagesList"></div>
+                    <div id="messageInput">
+                        <input type="text" placeholder="Type message">
+                        <button id="sendMessageButton">Send</button>
+                    </div>
+                </div>
 
             <div id="processing">
                 <img src="images/loading.gif">
